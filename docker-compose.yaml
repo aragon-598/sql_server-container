@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  sqlserver:
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+    user: '0:0'
+    container_name: sqlserver2019
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Ajar*1234
+      MSSQL_PID: Express
+    volumes:
+      - /home/aragon/Documentos/docker/sql_server/vol/data:/var/opt/mssql
+      - /home/aragon/Documentos/docker/sql_server/vol/bkp:/var/opt/mssql/backup
+volumes:
+  sqlserver_volume:
