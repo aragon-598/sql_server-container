@@ -1,4 +1,4 @@
---PASO 1
+--PASO 1 https://medium.com/@yunuseulucay/how-to-import-bak-data-in-ubuntu-456abb05bdfc
 use master;
 
 --PASO 2
